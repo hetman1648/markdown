@@ -1,13 +1,34 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+body {color: rgba(0,0,0,.87); font: 16px 'Roboto', sans-serif; margin: 0; padding: 0;}
+* {box-sizing: border-box;}
+img {height: auto; max-width: 100%;}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/* .sp-bg {min-height: 100%; width: calc((100% - 1239px)/2); background-repeat: no-repeat; background-size: cover; position: fixed; top: 0;}
+.sp-bg-left {left: 0; background-position-x: left;}
+.sp-bg-right {right: 0; background-position-x: right;} */
+
+/* content style */
+
+.sp-main {background-color: #fff; margin: 0 auto; max-width: 1240px; padding: .125rem 0}
+
+.sp-block {display: flex; flex-wrap: wrap; margin: 4vw 2vw;}
+.sp-block-img {padding: 0 2rem; width: 40%;}
+.sp-block-text {font-size: .875rem;  width: 100%;}
+.sp-block-text > * {margin-top: 0;}
+.sp-block-img + .sp-block-text {width: 60%;}
+.sp-block-title {font-size: .875rem; font-weight: 700; margin-bottom: 1.75rem;}
+
+
+.bg-section-title {background-color: #000;}
+.bg-section-title .input-group-text {background: #000; color: #fff;}
+.bg-section-title .form-select {background-color: #000; color: #fff;}
+.bg-section-title .form-select option {background-color: #000; color: #fff;}
+.bg-section-body {background-color: #434343;}
+.bg-section-body .input-group-text {background-color: #434343; color: #fff;}
+.bg-section-control {background-color: #fbf2ce;}
+.bg-section-control .form-control {background-color: transparent; border: 0;}
+.bg-section-control .input-group-text {background-color: #fbf2ce;}
+.form-input-check {margin-left:20px;}
+
+.col {overflow: scroll; height: 600px;}
+
+#txtMarkdown {height: 500px; width: 300px; margin-top:20px;}

@@ -105,6 +105,20 @@ function App() {
   const totalWords =  titles.reduce((total, text) => total + countWords(text), 0)
   + bodies.reduce((total, text) => total + countWords(text), 0);
 
+  const clearTextArea = () => {
+    document.getElementById('txtMarkdown').value = '';
+  };
+
+  const copyToClipboard = () => {
+    const markdown = document.getElementById('txtMarkdown').value;
+    try {
+      navigator.clipboard.writeText(markdown);
+      //  alert('Texts copied to clipboard!');
+    } catch (err) {
+      //  alert('Failed to copy texts to clipboard');
+    }
+  };
+
 
   const generateMarkdown = async () => {
     let markdown =  ''; // titles.join('\n\n'); // Separate each textarea content with two newline characters
@@ -182,9 +196,12 @@ function App() {
 
                 <div>
                 {showInfo && <div className="alert alert-info mt-2">Generated and copied to clipboard!</div>}
+
                   <p class='text-info'>Total characters: <b>{totalChars}</b> Total words: <b>{totalWords}</b></p></div>
                     <button type="button" class="btn btn-primary" onClick={generateMarkdown}>Generate Markdown ↓</button>
                     <textarea class="form-control" id="txtMarkdown" rows="20"></textarea>
+                    <button type="button" class="btn btn-secondary mt-2" style={{ marginRight: "10px" }}  onClick={copyToClipboard}>Copy to Clipboard</button>
+                    <button type="button" class="btn btn-secondary mt-2" onClick={clearTextArea}>Clear All</button>
                 </div>                      
             </div>
           </div>

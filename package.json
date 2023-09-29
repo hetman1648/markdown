@@ -1,5 +1,6 @@
 {
-  "name": "my-react-app",
+  "name": "leovegas-markdown-generator",
+  "homepage": "https://nms.uk/markdowngenerator/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
